@@ -2,16 +2,14 @@ package ru.job4j.tracker.oop;
 
 public class Jukebox {
     /**
-     * метод игра музыку
-     * @param position
+     * Метод воспроизводит песню в зависимости от переданного параметра.
+     * @param position номер песни (1 или 2)
      */
     public void music(int position) {
-        if (position == 1) {
-            System.out.println("Пусть бегут неуклюже");
-        } else if (position == 2) {
-            System.out.println("Спокойной ночи");
-        } else {
-            System.out.println("Песня не найдена");
+        switch (position) {
+            case 1 -> System.out.println("Пусть бегут неуклюже");
+            case 2 -> System.out.println("Спокойной ночи");
+            default -> System.out.println("Песня не найдена");
         }
     }
 
