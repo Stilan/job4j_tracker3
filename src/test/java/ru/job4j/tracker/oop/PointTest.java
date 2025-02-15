@@ -21,6 +21,5 @@ class PointTest {
         double ex = 2.0;
         double result = point1.distance(point2);
         assertEquals(ex, result);
-
     }
 }
