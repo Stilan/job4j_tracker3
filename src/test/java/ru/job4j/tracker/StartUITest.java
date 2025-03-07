@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class StartUITest {
+
     @Test
     void whenAddItem() {
         String[] answers = {"Fix PC", "111"};
@@ -16,6 +17,7 @@ class StartUITest {
         assertThat(tracker.findAll()[0].getName()).isEqualTo("Fix PC");
         assertThat(tracker.findAll()[1].getName()).isEqualTo("111");
     }
+
     @Test
     void  whenAddItem2() {
         String[] answers = {"test"};
