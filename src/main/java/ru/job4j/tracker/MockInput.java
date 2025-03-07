@@ -3,17 +3,20 @@ package ru.job4j.tracker;
 import java.util.Scanner;
 
 public class MockInput implements Input {
-    Scanner scanner = new Scanner(System.in);
+    private String[] answers;
+    private int position = 0;
+
+    public MockInput(String[] answers) {
+        this.answers = answers;
+    }
 
     @Override
     public String askStr(String question) {
-        System.out.println(question);
-        return scanner.nextLine();
+        return answers[position++];
     }
 
     @Override
     public int askInt(String question) {
-        System.out.println(question);
-        return scanner.nextInt();
+        return Integer.parseInt(askStr(question));
     }
 }
