@@ -6,15 +6,18 @@ public class Tracker {
     private final Item[] items = new Item[100];
     private int ids = 1;
     private int size = 0;
+    private static int accessCount = 0;
 
     public Item add(Item item) {
         item.setId(ids++);
         items[size++] = item;
+        accessCount++;
         return item;
     }
 
     public Item findById(int id) {
         int index = indexOf(id);
+        accessCount++;
         return index != -1 ? items[index] : null;
     }
 
@@ -28,6 +31,7 @@ public class Tracker {
             }
         }
         result = Arrays.copyOf(result, total);
+        accessCount++;
         return result;
     }
 
@@ -41,6 +45,7 @@ public class Tracker {
             }
         }
         result = Arrays.copyOf(result, total);
+        accessCount++;
         return result;
     }
 
@@ -61,6 +66,7 @@ public class Tracker {
             items[size - 1] = null;
             size--;
         }
+        accessCount++;
     }
 
     private int indexOf(int id) {
@@ -71,7 +77,12 @@ public class Tracker {
                 break;
             }
         }
+        accessCount++;
         return result;
+    }
+
+    public int getAccessCount() {
+        return accessCount;
     }
 
 }
