@@ -1,5 +1,4 @@
 package ru.job4j.tracker.ooa;
-
 public class Airport {
     public static void main(String[] args) {
         Airbus airbus = new Airbus("A320");
@@ -14,3 +13,4 @@ public class Airport {
         System.out.println(airbus);
     }
 }
+
