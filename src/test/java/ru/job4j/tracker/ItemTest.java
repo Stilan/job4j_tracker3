@@ -13,9 +13,9 @@ class ItemTest {
     @Test
     public void whenSortingByIncreasingItem() {
         List<Item> list = new ArrayList<>();
-        list.add(new Item("Job" ));
-        list.add(new Item("Go to home" ));
-        list.add(new Item("Works" ));
+        list.add(new Item("Job"));
+        list.add(new Item("Go to home"));
+        list.add(new Item("Works"));
         assertThat(list.get(0).getName()).isEqualTo("Job");
         assertThat(list.get(1).getName()).isEqualTo("Go to home");
         assertThat(list.get(2).getName()).isEqualTo("Works");
@@ -28,9 +28,9 @@ class ItemTest {
     @Test
     public void whenSortingByDescendingItem() {
         List<Item> list = new ArrayList<>();
-        list.add(new Item("Job" ));
-        list.add(new Item("Go to home" ));
-        list.add(new Item("Works" ));
+        list.add(new Item("Job"));
+        list.add(new Item("Go to home"));
+        list.add(new Item("Works"));
         assertThat(list.get(0).getName()).isEqualTo("Job");
         assertThat(list.get(1).getName()).isEqualTo("Go to home");
         assertThat(list.get(2).getName()).isEqualTo("Works");
