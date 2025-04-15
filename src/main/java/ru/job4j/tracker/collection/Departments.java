@@ -12,7 +12,6 @@ public class Departments {
                 start += element;
                 temp.add(start);
                 start += "/";
-                /* temp.add start + "/" + element */
             }
         }
         return new ArrayList<>(temp);
